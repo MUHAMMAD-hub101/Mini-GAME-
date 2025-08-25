@@ -173,7 +173,7 @@ const disableboxes=()=>{
 const enableboxes=()=>{
    for(let boxes of btn){
      boxes.innerText="";
-     boxes.style.background="white";
+     boxes.style.background="transparent";
    }
 };
 

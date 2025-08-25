@@ -240,9 +240,9 @@ const checkWinner = () => {
        if(posval1===posval2 && posval2 === posval3){
          let winner;
            if(posval1==="O"){
-           winner = username1.value
+           winner = username1.value==""?"Player 1":username1.value;
            }if(posval1==="X"){
-           winner = username2.value
+           winner = username2.value==""?"Player 2":username2.value
            }
 
       disableboxes();

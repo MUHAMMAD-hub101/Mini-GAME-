@@ -8,7 +8,6 @@ let msg2=document.querySelector(".msg2");
 let username1=document.querySelector("#username1");
 let username2=document.querySelector(".username2");
 let submitbtn=document.querySelector("#submitbtn");
-let showenter1=document.querySelector(".showenter1");
 let hidebox=document.querySelector(".container");
 username1.focus();
 let turnO=true;

@@ -229,16 +229,7 @@ background-size: cover;
   line-height: 100px;
 
 }
-.showenter1{
-position: absolute;
-z-index: 3;
-top:22%;
-left:10%;
-text-shadow: 0 3px 0 white;
-}
-.hideenter1{
-  display: none;
-}
+
 }
 
 @media (max-width:1050px){
@@ -396,16 +387,7 @@ text-shadow: 0 3px 0 white;
   line-height: 100px;
 
 }
-.showenter1{
-position: absolute;
-z-index: 3;
-top:22%;
-left:2%;
-text-shadow: 0 3px 0 white;
 }
-.hideenter1{
-  display: none;
-}}
 
 @media (max-width:850px){
   .gametittle{
@@ -577,16 +559,7 @@ text-shadow: 0 3px 0 white;
   line-height: 50px;
 
 }
-.showenter1{
-position: absolute;
-z-index: 3;
-top:20%;
-text-shadow: 0 3px 0 white;
 
-}
-.hideenter1{
-  display: none;
-}
 }
 @media(max-height:415px){
   .gametittle{
@@ -781,14 +754,5 @@ text-shadow: 0 3px 0 white;
   line-height: 50px;
 
 }
-.showenter1{
-position: absolute;
-z-index: 3;
-top:20%;
-text-shadow: 0 3px 0 white;
 
-}
-.hideenter1{
-  display: none;
-}
 }

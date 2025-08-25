@@ -43,9 +43,6 @@ window.addEventListener("resize", function(){
    
 });
 function handlevent(){
-   if (username1.value!== "") {
-     showenter1.classList.remove("hideenter1");
-    }
     if(window.innerWidth <= 850){
       hidebox.classList.remove("container");
     }
@@ -67,7 +64,6 @@ submitbtn.addEventListener("click",function(){
          return;
       }
       hidebox.classList.add("container");
-      showenter1.classList.add("hideenter1");
       username1.style.display="none";
       username2.classList.remove("hideuser2");
       username2.focus();
@@ -107,7 +103,6 @@ username1.addEventListener("keydown", function(e) {
          return;
       }
       hidebox.classList.add("container");
-      showenter1.classList.add("hideenter1");
       username1.style.display="none";
       username2.classList.remove("hideuser2");
       username2.focus();

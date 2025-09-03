@@ -1,25 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Camera Access Example</title>
-</head>
+    <title>TIC TAC TOE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    </head>
+ 
 <body>
-  <h2>Live Camera Stream</h2>
-  <video id="camera" autoplay playsinline width="400"></video>
+    <div class="width"></div>
+    <button class="resetbtn hiderstbtn">RESET</button>
+    <input type="text" id="username1" placeholder="Player 1" value="">
+    <input type="text" class="username2 hideuser2" placeholder="Player 2" value="">
+    <button id="submitbtn">Submit</button>
+    <button class="newbtn hidenewbtn">NEW GAME</button>
+    <div class="msgcontainer hide"><p class="msg"></p><p class="msg2"></p></div>
+    <main>
+       <div class="tcont" ><h1 class="gametittle">TIC TAC TOE</h1></div>
+        <div class="container hidebox">
+        <div class="game">
 
-  <script>
-    // Video element
-    let video = document.getElementById("camera");
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
 
-    // User ka camera access karna
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-      .then(stream => {
-        // stream ko video element me dikhana
-        video.srcObject = stream;
-      })
-      .catch(error => {
-        console.error("Camera access denied:", error);
-      });
-  </script>
+    </div>
+    </div>
+    
+    </main>
+    <script src="main.js">
+
+    </script>
 </body>
 </html>
+

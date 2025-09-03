@@ -1,3 +1,29 @@
+let numbers = [[1000],[2000], [3000]];
+let usFormat = numbers.toLocaleString('en-US');
+// usFormat: "1,000,2,000,3,000"
+console.log(usFormat);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let body=document.querySelector("body");
 let btn=document.querySelectorAll(".box");
 let rstbtn=document.querySelector(".resetbtn");

@@ -1,29 +1,41 @@
 let numbers = [[1000],[2000], [3000]];
 let usFormat = numbers.toLocaleString('en-US');
 // usFormat: "1,000,2,000,3,000"
-console.log(usFormat);
+// 1. Saari images aur unki positions ka ek data array banayein
+const bgSlides = [
+  { url: "https://images.pexels.com/photos/19394891/pexels-photo-19394891.jpeg", pos: "center" },
+  { url: "https://images.pexels.com/photos/22775646/pexels-photo-22775646.jpeg", pos: "center 30%" },
+  { url: "https://images.pexels.com/photos/16789919/pexels-photo-16789919.jpeg", pos: "center 10%" },
+  { url: "https://images.pexels.com/photos/17290619/pexels-photo-17290619.jpeg", pos: "center 68%" },
+  { url: "https://images.pexels.com/photos/19394891/pexels-photo-19394891.jpeg", pos: "center 85%" },
+  { url: "https://images.pexels.com/photos/18444060/pexels-photo-18444060.jpeg", pos: "center 85%" },
+  { url: "https://images.pexels.com/photos/33630679/pexels-photo-33630679.jpeg", pos: "center 60%" },
+  { url: "https://images.pexels.com/photos/12510056/pexels-photo-12510056.jpeg", pos: "center 70%" },
+  { url: "https://images.pexels.com/photos/19094064/pexels-photo-19094064.jpeg", pos: "center 45%" },
+  { url: "https://images.pexels.com/photos/5816640/pexels-photo-5816640.jpeg",   pos: "center 35%" },
+  { url: "https://images.pexels.com/photos/26082632/pexels-photo-26082632.jpeg", pos: "center 28%" }
+];
 
+let currentIndex = 0;
+const htmlElement = document.documentElement; // 'html' tag ko select karne ke liye
 
+// 2. Background change karne ka function
+function changeBackground() {
+  const currentSlide = bgSlides[currentIndex];
+  
+  // HTML style ko update karna
+  htmlElement.style.backgroundImage = `url('${currentSlide.url}')`;
+  htmlElement.style.backgroundPosition = currentSlide.pos;
 
+  // Index ko agle step par le jana, aur end me dobara 0 se start karna (Infinite loop)
+  currentIndex = (currentIndex + 1) % bgSlides.length;
+}
 
+// 3. Pehli image foran load ho jaye
+changeBackground();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 4. Har 33 seconds (33000 milliseconds) baad image change ho
+setInterval(changeBackground,10000);
 let body=document.querySelector("body");
 let btn=document.querySelectorAll(".box");
 let rstbtn=document.querySelector(".resetbtn");

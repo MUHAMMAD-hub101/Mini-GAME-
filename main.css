@@ -3,20 +3,23 @@
   margin: 0;
   padding: 0;
 }
-body{
+/* body{
 background-image : url('https://hips.hearstapps.com/hmg-prod/images/lofoten-summer-landscape-royalty-free-image-1623252210.jpg?crop=1xw:1xh;center,top&resize=980:*');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
     
   
+} */
+ html {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Smooth transition ke liye aap ye line add kar sakte hain (Optional) */
+  transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out;
 }
-@media (max-width:1500px){
 
-.width{
-  position: absolute;
-  z-index: 3;
-}
+
 .hidebox{
   display: none;
 }
@@ -36,6 +39,8 @@ background-size: cover;
   justify-content: center;
   align-items: center;
   gap:10px;
+  border-radius: 3rem;
+  background: rgba(0, 81, 255, 0.196);
  
 }
 .box{
@@ -167,8 +172,8 @@ background-color:rgba(255, 255, 255, 0.3);
   text-align: center;
   border-radius: 10px;
   border: none;
-  background-color:blue;
-  box-shadow: 0 0 0px 5px  black;
+  background-color:rgba(0, 0, 255, 0.457);
+  box-shadow: 0 0 0px 5px  rgba(0, 0, 0, 0.427);
   position: absolute;
   z-index: 3;
   display:flex ;
@@ -189,8 +194,8 @@ background-color:rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   text-align: center;
   border: none;
-  background-color:#00ff00 ;
-  box-shadow: 0 0 0 4px rgb(0, 68, 255);
+  background-color:#00ff0058 ;
+  box-shadow: 0 0 0 4px rgba(0, 68, 255, 0.427);
   text-shadow: 0 2px 0 white ;
   position: absolute;
   z-index: 3;
@@ -237,7 +242,7 @@ background-color:rgba(255, 255, 255, 0.3);
 
 }
 
-}
+
 
 @media (max-width:1050px){
   #submitbtn{

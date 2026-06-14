@@ -77,7 +77,7 @@ html {
 }
 
 
-
+@media (max-width:1500px){
 .hidebox{
   display: none;
 }
@@ -301,7 +301,7 @@ background-color:rgba(255, 255, 255, 0.3);
 }
 
 
-
+}
 @media (max-width:1050px){
   #submitbtn{
     top:16%;

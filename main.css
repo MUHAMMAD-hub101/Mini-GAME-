@@ -11,13 +11,71 @@ background-size: cover;
     
   
 } */
- html {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /* Smooth transition ke liye aap ye line add kar sakte hain (Optional) */
-  transition: background-image 0.5s ease-in-out, background-position 0.5s ease-in-out;
+/* Engine-level configuration for smooth color blending */
+@property --gradient-color-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #1a1c29;
 }
+
+@property --gradient-color-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #080b11;
+}
+
+html {
+  min-height: 100vh;
+  /* Applying modern multi-stop linear gradient */
+  background-image: linear-gradient(135deg, var(--gradient-color-1), var(--gradient-color-2));
+  background-attachment: fixed;
+  /* steps(1) ko hta kar normal smooth transitions curves define kiye hain */
+  animation: dynamicGradient 30s ease infinite;
+}
+
+@keyframes dynamicGradient {
+  0%, 100% {
+    --gradient-color-1: #1a1c29;
+    --gradient-color-2: #080b11;
+  }
+  10% {
+    --gradient-color-1: #0f2027;
+    --gradient-color-2: #203a43;
+  }
+  20% {
+    --gradient-color-1: #130cb7;
+    --gradient-color-2: #52e5e7;
+  }
+  30% {
+    --gradient-color-1: #2c3e50;
+    --gradient-color-2: #000000;
+  }
+  40% {
+    --gradient-color-1: #11998e;
+    --gradient-color-2: #38ef7d;
+  }
+  50% {
+    --gradient-color-1: #4e54c8;
+    --gradient-color-2: #8f94fb;
+  }
+  60% {
+    --gradient-color-1: #fc4a1a;
+    --gradient-color-2: #f7b733;
+  }
+  70% {
+    --gradient-color-1: #1a2a6c;
+    --gradient-color-2: #b21f1f;
+  }
+  80% {
+    --gradient-color-1: #00bf8f;
+    --gradient-color-2: #001510;
+  }
+  90% {
+    --gradient-color-1: #833ab4;
+    --gradient-color-2: #fd1d1d;
+  }
+}
+
 
 
 .hidebox{
@@ -39,7 +97,7 @@ background-size: cover;
   justify-content: center;
   align-items: center;
   gap:10px;
-  border-radius: 3rem;
+  border-radius: 10px;
   background: rgba(0, 81, 255, 0.196);
  
 }
